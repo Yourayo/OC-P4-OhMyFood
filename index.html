@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oh my food</title>
+    <title>OhMyFood - Accueil</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/style.css" />
     <!-- Font Awesome-->
@@ -14,10 +14,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
-    <h1>Test Titre h1 Oh my food</h1>
+    <header>
+      <div class="logo">
+        <img src="./assets/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" />
+      </div>
+    </header>
+    <main class="main-container">
+      <form class="location">
+        <i class="fa-solid fa-location-dot"></i>
+         <label for="location"></label>
+         <input type="search" id="location" name="location" placeholder="Paris, Belleville"></input>
+      </form>
+      <div class="hero">
+        <h1>Réservez le menu qui vous convient</h1>
+         <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+      </div>
+      <section class="functioning">
+        <h2>Fonctionnement</h2>
+      </section>
+    </main>
   </body>
 </html>

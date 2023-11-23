@@ -1,10 +1,12 @@
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  color: aqua;
-}
+@use "./base/bases";
+@use "./base/reset";
+@use "./base/typographie";
+@use "./components/button";
+@use "./layout/footer";
+@use "./layout/header";
+@use "./layout/index";
+@use "./layout/loader";
+@use "./utils/keyframes";
+@use "./utils/mixins";
+@use "./utils/placeholder";
+@use "./utils/variables.scss";
