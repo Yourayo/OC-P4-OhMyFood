@@ -1,0 +1,15 @@
+@mixin title-font {
+  font-family: "Shrikhand", cursive;
+}
+
+@mixin text-font {
+  font-family: "Roboto", sans-serif;
+}
+
+@mixin header-shadow {
+  box-shadow: 0 0 5px 5px darken($light-grey, 8%);
+}
+
+@mixin shadow-button {
+  box-shadow: 0 0 10px 0 darken($light-grey2, 26%);
+}
