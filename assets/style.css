@@ -435,4 +435,113 @@ footer .fa-solid {
   margin-right: 10px;
 }
 
+@media (min-width: 767px) and (max-width: 1025px) {
+  .hero .hero-title {
+    font-size: 35px;
+  }
+  .hero p {
+    font-size: 20px;
+  }
+  .hero .btn {
+    height: 50px;
+    width: 230px;
+  }
+  .fonction {
+    margin: 20px 0 50px 20px;
+  }
+  .fonction .fonction-title {
+    font-size: 24px;
+  }
+  .fonction .fonction__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .fonction .fonction-content {
+    width: 30%;
+    font-size: 16px;
+  }
+  .restaurant {
+    padding-bottom: 0px;
+  }
+  .restaurant h2 {
+    font-size: 24px;
+  }
+  .restaurant .cards-restaurant {
+    gap: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+  }
+  .restaurant .card-content {
+    width: 48%;
+  }
+  footer {
+    height: 118px;
+  }
+  footer .logo-footer {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  footer .footercontent {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer .liste {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  footer .lien1 {
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .logo {
+    margin: 20px 0 10px 0;
+    width: 200px;
+  }
+  .hero-title {
+    font-size: 40px;
+  }
+  .fonction {
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+  .fonction .fonction__block {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin: 0 30px;
+    flex-wrap: nowrap;
+  }
+  .restaurant {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .restaurant .cards-restaurant {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-content {
+    width: 50%;
+  }
+  br {
+    display: none;
+  }
+  footer .liste {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  footer .lien1 {
+    padding-right: 20px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
