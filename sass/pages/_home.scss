@@ -1,117 +1,264 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
-.location {
-  width: 100%;
-  background-color: $light-grey;
+// Section Navbar
+
+.navbar {
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
-  margin-top: 5px;
-
-  & i {
-    font-size: 19px;
-  }
-
-  & input {
-    width: 9rem;
-    @include text-font;
-    font-size: 1rem;
-    font-weight: 400;
-    text-align: center;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    background-color: $light-grey;
-  }
-
-  & input:focus {
-    background-color: rgba(255, 255, 255, 0.4);
-    margin-left: 15px;
-  }
 }
 
-/* Secton Hero */
+.navbar .position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  width: 100%;
+  gap: 17px;
+  border-top: 2px solid #cccccc;
+}
+.navbar .position .p {
+  margin-left: 20px;
+}
+
+// Section Hero
+
 .hero {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding-top: 20px;
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 30px;
-  background-color: $light-grey2;
-  display: grid;
-  place-items: center;
-
-  & h1 {
-    @media screen and (min-width: 1024px) {
-      font-size: 2.5rem;
-    }
-  }
-
-  & p {
-    @include text-font;
-    font-size: 1.12rem;
-    font-weight: 300;
-    text-align: center;
-    color: $dark-grey;
-    padding-top: 15px;
-  }
+  padding-bottom: 35px;
 }
 
-/* Functioning */
-
-.functioning {
-  width: 100%;
-  counter-reset: steps-functioning;
-  margin-bottom: 30px;
+.hero h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
-.summary-blocks {
+.hero p {
+  font-size: 18px;
+  font-weight: 300px;
+}
+
+.hero .btn {
+  border-radius: 25px;
+  color: #ffffff;
+  background: linear-gradient(#ff79da, #9356dc);
+  border: none;
+  height: 50px;
+  width: 220px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 15px;
+  font-family: "Roboto", sans-serif;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hero .btn:hover {
+  background: linear-gradient(#ff90e7, #a16eff);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+// Section Fonction
+
+.fonction {
+  margin: 20px 0 50px 20px;
+}
+
+.fonction .fonction__block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fonction .fonction-content {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  height: 70px;
+  margin: 10px;
+  width: 90%;
+  cursor: pointer;
+}
+
+.fonction .fonction-content:hover .fonction__icon {
+  color: #9356dc;
+}
+
+.fonction .fonction_number {
+  background-color: #9747ff;
+  color: #ffffff;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10px;
+}
+
+.fonction h2 {
+  display: inline-block;
+}
+
+.fonction p {
+  display: block;
+  margin: 0px 0 0 17px;
+  color: #131313;
+}
+
+.fonction .fonction__icon {
+  margin-left: 20px;
+  color: #7e7e7e;
+}
+
+// Section Restaurant
+
+.restaurant {
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.restaurant h2 {
+  margin-left: 25px;
+  margin-bottom: 0px;
+  margin-top: 40px;
+  font-size: 24px;
+}
+
+.restaurant .card {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+  width: 90%;
+  border-radius: 15px;
+  position: relative;
+  margin: 20px;
+}
+
+.restaurant .card .card-content {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.restaurant .card img {
+  height: 231px;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.restaurant .card .new {
+  position: absolute;
+  top: 0%;
+  right: 5%;
+}
+
+.restaurant .card .container-new {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 25px;
+}
+
+.restaurant .card .container-new p {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  @media screen and (min-width: 1024px) {
-    flex-direction: row;
-    justify-content: center;
-    gap: 5%;
-  }
+  height: 30px;
+  padding: 5px 15px;
+  color: #008766;
+  background-color: #99e2d0;
+  border-radius: 5%;
+  margin-left: 10px;
+}
 
-  & .summary {
-    max-width: 82%;
-    height: 20px;
-    background-color: $light-grey2;
-    border-radius: 20px;
-    margin: 20px;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include shadow-button;
-    position: relative;
-  }
-  & div::before {
-    counter-increment: summary-functioning;
-    content: "" counter(summary-functioning);
-    width: 30px;
-    height: 30px;
-    background-color: $primary-color;
-    border-radius: 50%;
-    padding: 5px;
-    display: grid;
-    place-items: center;
-    @include text-font;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: $text-white;
-    position: absolute;
-    left: -14px;
-  }
+.restaurant .card .card-txt {
+  color: #131313;
+  margin-left: 3px;
+  margin-top: 2px;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+}
 
-  & i {
-    font-size: 20px;
-    color: darken($light-grey, 40%);
-    margin-right: 10px;
-  }
+.restaurant .card .card-txt h3 {
+  display: inline-block;
+  margin: 20px 0 0 15px;
+  border-radius: 20px 20px 0 0;
+}
+
+.restaurant .card .card-txt p {
+  margin: 5px 0 0 17px;
+}
+
+.restaurant .card .full {
+  position: absolute;
+  top: 83%;
+  right: 10%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.restaurant .card .empty {
+  position: absolute;
+  top: 83%;
+  right: 10%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+// Footer
+
+footer {
+  background-color: #353535;
+  width: 100%;
+  height: 180px;
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer .footercontent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+footer .logo-footer {
+  filter: invert(1);
+  padding-left: 9px;
+  width: 139px;
+  height: 20px;
+}
+
+footer .liste {
+  padding-left: 20px;
+  list-style: none;
+}
+
+footer .lien {
+  font-size: 18px;
+}
+
+footer .fa-solid {
+  margin-right: 10px;
 }

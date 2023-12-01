@@ -2,55 +2,13 @@
 @import "../utils/mixins";
 
 body {
-  @include text-font;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  display: block;
 }
 
-.main-container {
-  @media screen and (min-width: 1024px) {
-    width: 1440px;
-    margin: 0 auto;
-  }
-
-  h1 {
-    @include text-font;
-    font-size: 1.5rem;
-    font-weight: 900;
-    margin-left: 15px;
-    color: $text-black;
-
-    @media screen and (min-width: 1024px) {
-      text-align: center;
-    }
-  }
-
-  h2 {
-    @include text-font;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: $text-black;
-    margin: 40px 0 20px 20px;
-  }
-
-  h3 {
-    @include title-font;
-    font-size: 1.125rem;
-    font-weight: 400;
-    color: $text-white;
-  }
-
-  h4 {
-    @include text-font;
-    font-size: 1rem;
-    font-weight: 500;
-    color: darken($tertiary-color, 60%);
-  }
-
-  p {
-    @include text-font;
-    font-size: 1rem;
-
-    @media screen and (min-width: 1024px) {
-      font-size: 1.2rem;
-    }
-  }
+a {
+  text-decoration: none;
+  color: #111111;
 }

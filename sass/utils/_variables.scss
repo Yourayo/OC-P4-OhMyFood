@@ -9,3 +9,9 @@ $light-grey: #eaeaea;
 $light-grey2: #f6f6f6;
 $text-black: #000000;
 $text-white: #ffffff;
+
+$font-family_1: "Roboto", sans-serif;
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
+
+$btnhover: (200.64deg, #9356dc -5.2%, #ff79da 110.74%),
+  rgba(255, 255, 255, 0.15);

@@ -1,15 +1,48 @@
-@mixin title-font {
-  font-family: "Shrikhand", cursive;
+@import "../utils/variables";
+
+@mixin flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@mixin text-font {
-  font-family: "Roboto", sans-serif;
+@mixin btn {
+  border-radius: 25px;
+  color: $text-white;
+  background: linear-gradient(#ff79da, #9356dc);
+  border: none;
+  height: 50px;
+  width: 220px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@mixin header-shadow {
-  box-shadow: 0 0 5px 5px darken($light-grey, 8%);
+@mixin footermedia {
+  height: 118px;
+
+  .footercontent {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .logo-footer {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .liste {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 20px;
+  }
+
+  .lien1 {
+    padding-right: 20px;
+  }
 }
 
-@mixin shadow-button {
-  box-shadow: 0 0 10px 0 darken($light-grey2, 26%);
+@mixin logo {
+  margin: 20px 0 10px 0;
+  width: 200px;
 }
