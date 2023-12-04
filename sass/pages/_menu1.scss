@@ -1,0 +1,276 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// Mobile First
+
+a {
+  text-decoration: none;
+  color: $color6;
+}
+
+body {
+  width: 100%;
+  font-family: $font-family_1;
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+  .fa-arrow-left {
+    position: absolute;
+    left: 6px;
+    font-size: 24px;
+    top: 34px;
+  }
+
+  .logo {
+    @include logo;
+  }
+}
+
+.headimg {
+  height: 360px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  position: relative;
+  margin-top: -90px;
+  background-color: $background-color2;
+  padding: 20px;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+
+  h1 {
+    font-family: Shrikhand;
+    font-size: 24px;
+    margin: 40px 0px 40px 0px;
+  }
+
+  .content-title {
+    border-bottom: solid;
+    border-bottom: solid;
+    width: 41px;
+    border-color: #99e2d0;
+    margin: 12px 0px;
+  }
+
+  .icone-heart {
+    margin-right: 26px;
+  }
+
+  .title-heart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .full {
+    font-size: 25px;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: 57px;
+  }
+
+  .empty {
+    top: 57px;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .full:hover {
+    color: transparent;
+    background-image: linear-gradient(10deg, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 400ms;
+    opacity: 1;
+  }
+}
+
+.entrees {
+  animation: fadein;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+.plats {
+  animation: fadein;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+}
+
+.desserts {
+  animation: fadein;
+  animation-duration: 6s;
+  animation-timing-function: ease-in;
+}
+
+.card-menu {
+  margin-bottom: 40px;
+
+  h3 {
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 4px;
+  }
+
+  .card {
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001a;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+
+    &:hover {
+      .check {
+        margin: 0px;
+      }
+    }
+
+    p {
+      font-size: 15px;
+      margin: 0px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    h4 {
+      margin-bottom: 7px;
+      margin-top: 0px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    .name {
+      padding: 13px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .prix {
+      margin-right: 27px;
+      font-weight: bold;
+      margin-top: 39px;
+    }
+
+    .check {
+      display: flex;
+      background-color: #99e2d0;
+      color: white;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      width: 80px;
+      margin-right: -100px;
+      transition: 400ms ease-out;
+    }
+  }
+}
+
+.bouton-menu {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+
+  .btn {
+    @include btn;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background: linear-gradient(#ff90e7, #a16eff);
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+// Breakpoints Tablette
+
+@media (min-width: 767px) and (max-width: 1025px) {
+  .menu {
+    .title-heart {
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    .full {
+      margin-left: 20px;
+      top: 55px;
+    }
+
+    .empty {
+      margin-left: 20px;
+      top: 55px;
+    }
+  }
+
+  .card-container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  footer {
+    @include footermedia;
+  }
+}
+
+// Breakpoints Desktop
+
+@media (min-width: 1025px) {
+  .menu {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1055px;
+
+    .title-heart {
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    .full {
+      margin-left: 24px;
+      top: 55px;
+    }
+
+    .empty {
+      margin-left: 24px;
+      top: 55px;
+    }
+  }
+
+  .card-container {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  footer {
+    @include footermedia;
+  }
+}
