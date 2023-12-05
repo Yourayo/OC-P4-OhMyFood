@@ -556,7 +556,6 @@ body {
 header {
   display: flex;
   justify-content: center;
-  padding: 10px;
 }
 header .fa-arrow-left {
   position: absolute;
