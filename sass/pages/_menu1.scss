@@ -15,7 +15,6 @@ body {
 }
 
 header {
-  padding: 10px;
   display: flex;
   justify-content: center;
 
@@ -205,7 +204,7 @@ header {
   }
 }
 
-// Breakpoints Tablette
+// Breakpoints medium devices (tablets)
 
 @media (min-width: 767px) and (max-width: 1025px) {
   .menu {
@@ -238,7 +237,7 @@ header {
   }
 }
 
-// Breakpoints Desktop
+// Breakpoints large devices (Desktop)
 
 @media (min-width: 1025px) {
   .menu {
