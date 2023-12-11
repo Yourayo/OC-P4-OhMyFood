@@ -6,6 +6,12 @@
 @import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
 /* Reset CSS de Eric Meyer*/
 html,
 body,
@@ -156,6 +162,105 @@ table {
 .btn:hover {
   background: linear-gradient(#ff90e7, #a16eff);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes loader {
+  100% {
+    background-color: #7e7e7e;
+    display: none;
+    opacity: 99%;
+  }
+  50% {
+    background-color: #353535;
+    display: block;
+    opacity: 99%;
+  }
+  0% {
+    background-color: #131313;
+    display: block;
+    opacity: 99%;
+  }
+}
+@keyframes child2 {
+  0% {
+    transform: translateX(-20px);
+    z-index: 200;
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@keyframes child4 {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+    z-index: 200;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: #353535;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: loader 5s ease-in-out;
+  animation-fill-mode: both;
+}
+.loader h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  color: #ff79da;
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 45vh;
+  padding-bottom: 20px;
+}
+
+.loader span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  animation: 3s infinite linear;
+}
+
+.loader span:nth-child(2) {
+  background: #9356dc;
+  animation: child2 1.2s infinite linear;
+}
+
+.loader span:nth-child(3) {
+  background: #99e2d0;
+  z-index: 100;
+}
+
+.loader span:nth-child(4) {
+  background: #ff79da;
+  animation: child4 1.2s infinite linear;
 }
 
 body {
@@ -815,6 +920,55 @@ header .logo {
   }
   footer .lien1 {
     padding-right: 20px;
+  }
+}
+@keyframes loader {
+  100% {
+    background-color: #7e7e7e;
+    display: none;
+    opacity: 99%;
+  }
+  50% {
+    background-color: #353535;
+    display: block;
+    opacity: 99%;
+  }
+  0% {
+    background-color: #131313;
+    display: block;
+    opacity: 99%;
+  }
+}
+@keyframes child2 {
+  0% {
+    transform: translateX(-20px);
+    z-index: 200;
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@keyframes child4 {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+    z-index: 200;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
