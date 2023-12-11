@@ -1,14 +1,8 @@
 @use "./base/reset";
-@use "./base/bases";
-@use "./base/typographie";
 @use "./components/button";
-@use "./layout/footer";
-@use "./layout/header";
-@use "./layout/index";
 @use "./layout/loader";
 @use "./pages/home";
 @use "./pages/menu1";
 @use "./utils/keyframes";
 @use "./utils/mixins";
-@use "./utils/placeholder";
 @use "./utils/variables";
