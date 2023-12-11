@@ -1,14 +1,10 @@
 @use "./base/reset";
-@use "./base/bases";
-@use "./base/typographie";
 @use "./components/button";
-@use "./layout/footer";
-@use "./layout/header";
-@use "./layout/index";
 @use "./layout/loader";
 @use "./pages/home";
 @use "./pages/menu1";
 @use "./utils/keyframes";
 @use "./utils/mixins";
-@use "./utils/placeholder";
 @use "./utils/variables";
+
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap";
