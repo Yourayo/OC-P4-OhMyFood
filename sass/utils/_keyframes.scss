@@ -1,0 +1,60 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+@keyframes loader {
+  100% {
+    background-color: $color3;
+    display: none;
+    opacity: 99%;
+  }
+
+  50% {
+    background-color: $background-color6;
+    display: block;
+    opacity: 99%;
+  }
+
+  0% {
+    background-color: $color4;
+    display: block;
+    opacity: 99%;
+  }
+}
+
+@keyframes child2 {
+  0% {
+    transform: translateX(-20px);
+    z-index: 200;
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes child4 {
+  0% {
+    transform: translateX(20px);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(20px);
+    z-index: 200;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

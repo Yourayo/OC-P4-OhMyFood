@@ -1,0 +1,51 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../utils/keyframes";
+
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: $background-color6;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: loader 5s ease-in-out;
+  animation-fill-mode: both;
+
+  & h1 {
+    @include title-loader;
+    font-size: 2rem;
+    color: $color8;
+    letter-spacing: 1px;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 45vh;
+    padding-bottom: 20px;
+  }
+}
+.loader span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  animation: 3s infinite linear;
+}
+
+.loader span:nth-child(2) {
+  background: $color2;
+  animation: child2 1.2s infinite linear;
+}
+.loader span:nth-child(3) {
+  background: $background-color5;
+  z-index: 100;
+}
+.loader span:nth-child(4) {
+  background: $color8;
+  animation: child4 1.2s infinite linear;
+}
