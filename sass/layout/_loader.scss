@@ -3,6 +3,7 @@
 @import "../utils/keyframes";
 
 .loader {
+  animation: loader 3s forwards;
   width: 100%;
   height: 100%;
   background-color: $background-color6;
@@ -12,8 +13,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-  animation: loader 5s ease-in-out;
-  animation-fill-mode: both;
 
   & h1 {
     @include title-loader;

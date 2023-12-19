@@ -4,20 +4,18 @@
 @keyframes loader {
   100% {
     background-color: $color3;
-    display: none;
-    opacity: 99%;
+    visibility: hidden;
+    opacity: 1;
   }
 
   50% {
     background-color: $background-color6;
-    display: block;
-    opacity: 99%;
+    opacity: 1;
   }
 
   0% {
     background-color: $color4;
-    display: block;
-    opacity: 99%;
+    opacity: 1;
   }
 }
 
